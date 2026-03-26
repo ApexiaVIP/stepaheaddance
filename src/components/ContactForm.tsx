@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xpwzgkpn";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
