@@ -17,13 +17,19 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {[
             {
               icon: MapPin,
-              title: "Visit Us",
-              content: "Sylvia Roberts, Guide Hall, Cross Rd, Heald Green, SK8 3LW",
+              title: "Heald Green",
+              content: "Sylvia Roberts, Guide Hall, Cross RD, Heald Green, SK8 3LW",
               href: "https://maps.google.com/?q=Sylvia+Roberts+Guide+Hall+Cross+Rd+Heald+Green+SK8+3LW",
+            },
+            {
+              icon: MapPin,
+              title: "Poynton",
+              content: "The Hockley Centre, 307 Park Lane, Poynton, SK12 1RJ",
+              href: "https://maps.google.com/?q=The+Hockley+Centre+307+Park+Lane+Poynton+SK12+1RJ",
             },
             {
               icon: Phone,
