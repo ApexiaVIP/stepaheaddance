@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import classesImage from "@/assets/classes-dance.jpg";
+const classesImage = "https://www.stepaheaddance.co.uk/wp-content/uploads/2023/10/MG_2432-683x1024.jpg.webp";
 
 const AboutSection = () => {
   return (
