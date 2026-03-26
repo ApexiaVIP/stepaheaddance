@@ -89,13 +89,10 @@ const TeamSection = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="font-display text-xl font-bold text-charcoal">{member.name}</h3>
-                <p className="text-primary font-body text-sm font-semibold uppercase tracking-wide mb-3">
+              <div className="p-4">
+                <h3 className="font-display text-lg font-bold text-charcoal">{member.name}</h3>
+                <p className="text-primary font-body text-xs font-semibold uppercase tracking-wide">
                   {member.role}
-                </p>
-                <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                  {member.bio}
                 </p>
               </div>
             </motion.div>
