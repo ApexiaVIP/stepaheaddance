@@ -4,20 +4,57 @@ const team = [
   {
     name: "Natalie Hume",
     role: "Principal",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/01/Natalie_Hume.jpg.webp",
-    bio: "I am the principal of the school, I started dancing at Step Ahead when I was four, I was trained by the original owner Ms Yvonne Gilmore. I started my teaching career at 17 passing my fellowships in tap, ballet and modern, I then went onto become an examiner for the NATD. I then took over ownership of the school in 2005. I believe that dancing should be fun as well as a challenging discipline. To me, Step Ahead is more than a business, for which I have great ambitions.",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/01/Natalie_Hume.jpg",
   },
   {
     name: "Paolina Saulino",
-    role: "Teacher",
+    role: "Student Teacher",
     image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2023/10/17c1aae4-3c65-444b-aab3-f9a67a7f6406.jpeg.webp",
-    bio: "My name is Nina, I have been with Step Ahead for over 25 years. I was trained by Mrs Gilmore for many years and then in my late teens I was trained by our now principal, Natalie Hume. My teaching career started around 16 years ago when our Poynton branch opened. I started off as a student teacher on a Saturday along side attending my graded classes during the week in Tap, Ballet, Modern and Street dance. Then in 2013 I gained my teachers qualification and since then I haven't looked back. Step Ahead has been an incredible part of my life, I am so grateful for it and there is nothing like giving the gift of dance to a child.",
   },
   {
     name: "Caitlin Goman",
     role: "Teacher",
     image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2023/10/7912af3f-7cee-44c8-8f09-0594f2fa7337.jpeg.webp",
-    bio: "Has trained with Step Ahead since she was 3 years old, it's her 2nd home. At the age of 19 she flew the nest and carried on her training in London, at Mountview Academy of Theatre Arts in Musical Theatre. While still striving in her acting career, she's come back home again to teach her skills in Tap, Ballet, Modern, Street and Musical Theatre.",
+  },
+  {
+    name: "Danielle McPeake",
+    role: "Student Teacher",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/image.jpg",
+  },
+  {
+    name: "Emily Carson",
+    role: "Student Teacher",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/EC.jpeg",
+  },
+  {
+    name: "Essy Purslow",
+    role: "Student Teacher",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/EP.jpeg",
+  },
+  {
+    name: "Connie Maguire",
+    role: "Student Teacher",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/image.jpg",
+  },
+  {
+    name: "Libby Mcmillan",
+    role: "Student Teacher",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/LM.jpeg",
+  },
+  {
+    name: "Holly Durban",
+    role: "Student Teacher",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/HD.jpeg",
+  },
+  {
+    name: "Elizabeth Peskir",
+    role: "Student Teacher",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/image.jpg",
+  },
+  {
+    name: "Georgia McGlone",
+    role: "Student Teacher",
+    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/GM.jpeg",
   },
 ];
 
