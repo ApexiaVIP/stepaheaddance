@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xpwzgkpn";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -43,11 +44,13 @@ const ContactForm = () => {
 
     setSending(true);
     try {
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: result.data,
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(result.data),
       });
 
-      if (error) throw error;
+      if (!response.ok) throw new Error("Failed to send");
 
       setSent(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
