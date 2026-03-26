@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xpwzgkpn";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xqegaqeq";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
