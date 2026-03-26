@@ -44,11 +44,13 @@ const ContactForm = () => {
 
     setSending(true);
     try {
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: result.data,
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(result.data),
       });
 
-      if (error) throw error;
+      if (!response.ok) throw new Error("Failed to send");
 
       setSent(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
