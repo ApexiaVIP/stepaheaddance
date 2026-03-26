@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail } from "lucide-react";
 import logo from "@/assets/logo.png";
+import FooterMap from "./FooterMap";
 
 const Footer = () => {
   return (
     <footer className="bg-charcoal text-primary-foreground py-16">
       <div className="container">
+        {/* Map Section */}
+        <div className="mb-12">
+          <h4 className="font-display text-lg font-bold mb-4 text-center">Our Locations</h4>
+          <FooterMap />
+        </div>
+
         <div className="grid md:grid-cols-3 gap-12">
           <div>
             <img src={logo} alt="Step Ahead Dance School" className="h-16 w-auto mb-4 brightness-200" />
@@ -24,7 +31,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display text-lg font-bold mb-4">Our Locations</h4>
+            <h4 className="font-display text-lg font-bold mb-4">Get in Touch</h4>
             <div className="space-y-4">
               <div>
                 <p className="text-primary font-body text-xs font-semibold uppercase tracking-wide mb-1">Heald Green</p>
