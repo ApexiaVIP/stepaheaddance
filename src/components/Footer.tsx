@@ -24,14 +24,22 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display text-lg font-bold mb-4">Get in Touch</h4>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-primary mt-1 shrink-0" />
+            <h4 className="font-display text-lg font-bold mb-4">Our Locations</h4>
+            <div className="space-y-4">
+              <div>
+                <p className="text-primary font-body text-xs font-semibold uppercase tracking-wide mb-1">Heald Green</p>
                 <p className="text-primary-foreground/60 font-body text-sm">
-                  Sylvia Roberts, Guide Hall, Cross Rd, Heald Green, SK8 3LW
+                  Sylvia Roberts, Guide Hall, Cross RD, Heald Green, SK8 3LW
                 </p>
               </div>
+              <div>
+                <p className="text-primary font-body text-xs font-semibold uppercase tracking-wide mb-1">Poynton</p>
+                <p className="text-primary-foreground/60 font-body text-sm">
+                  The Hockley Centre, 307 Park Lane, Poynton, SK12 1RJ
+                </p>
+              </div>
+            </div>
+            <div className="mt-4 space-y-3">
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
                 <a href="tel:07799614260" className="text-primary-foreground/60 font-body text-sm hover:text-primary transition-colors">

@@ -21,9 +21,15 @@ const ContactSection = () => {
           {[
             {
               icon: MapPin,
-              title: "Visit Us",
-              content: "Sylvia Roberts, Guide Hall, Cross Rd, Heald Green, SK8 3LW",
+              title: "Heald Green",
+              content: "Sylvia Roberts, Guide Hall, Cross RD, Heald Green, SK8 3LW",
               href: "https://maps.google.com/?q=Sylvia+Roberts+Guide+Hall+Cross+Rd+Heald+Green+SK8+3LW",
+            },
+            {
+              icon: MapPin,
+              title: "Poynton",
+              content: "The Hockley Centre, 307 Park Lane, Poynton, SK12 1RJ",
+              href: "https://maps.google.com/?q=The+Hockley+Centre+307+Park+Lane+Poynton+SK12+1RJ",
             },
             {
               icon: Phone,
