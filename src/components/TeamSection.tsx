@@ -6,61 +6,43 @@ const team = [
   {
     name: "Natalie Hume",
     role: "Founder & Principal",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/01/Natalie_Hume.jpg",
     bio: "I am the principal of the school, I started dancing at Step Ahead when I was four, I was trained by the original owner Ms Yvonne Gilmore. I started my teaching career at 17 passing my fellowships in tap, ballet and modern, I then went onto become an examiner for the NATD. I then took over ownership of the school in 2005. I believe that dancing should be fun as well as a challenging discipline. To me, Step Ahead is more than a business, for which I have great ambitions.",
   },
   {
     name: "Paolina Saulino",
     role: "Assistant Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2023/10/17c1aae4-3c65-444b-aab3-f9a67a7f6406.jpeg.webp",
     bio: "My name is Nina, I have been with Step Ahead for over 25 years. I was trained by Mrs Gilmore for many years and then in my late teens I was trained by our now principal, Natalie Hume. My teaching career started around 16 years ago when our Poynton branch opened. I started off as a student teacher on a Saturday along side attending my graded classes during the week in Tap, Ballet, Modern and Street dance. Then in 2013 I gained my teachers qualification and since then I haven't looked back. Step Ahead has been an incredible part of my life, I am so grateful for it and there is nothing like giving the gift of dance to a child.",
   },
   {
     name: "Caitlin Goman",
     role: "Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2023/10/7912af3f-7cee-44c8-8f09-0594f2fa7337.jpeg.webp",
     bio: "Has trained with Step Ahead since she was 3 years old, it's her 2nd home. At the age of 19 she flew the nest and carried on her training in London, at Mountview Academy of Theatre Arts in Musical Theatre. While still striving in her acting career, she's come back home again to teach her skills in Tap, Ballet, Modern, Street and Musical Theatre.",
   },
-  {
-    name: "Danielle McPeake",
-    role: "Student Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/image.jpg",
-  },
-  {
-    name: "Emily Carson",
-    role: "Student Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/EC.jpeg",
-  },
-  {
-    name: "Essy Purslow",
-    role: "Student Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/EP.jpeg",
-  },
-  {
-    name: "Connie Maguire",
-    role: "Student Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/image.jpg",
-  },
-  {
-    name: "Libby Mcmillan",
-    role: "Student Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/LM.jpeg",
-  },
-  {
-    name: "Holly Durban",
-    role: "Student Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/HD.jpeg",
-  },
-  {
-    name: "Elizabeth Peskir",
-    role: "Student Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/image.jpg",
-  },
-  {
-    name: "Georgia McGlone",
-    role: "Student Teacher",
-    image: "https://www.stepaheaddance.co.uk/wp-content/uploads/2019/02/GM.jpeg",
-  },
+  { name: "Danielle McPeake", role: "Student Teacher" },
+  { name: "Emily Carson", role: "Student Teacher" },
+  { name: "Essy Purslow", role: "Student Teacher" },
+  { name: "Connie Maguire", role: "Student Teacher" },
+  { name: "Libby Mcmillan", role: "Student Teacher" },
+  { name: "Holly Durban", role: "Student Teacher" },
+  { name: "Elizabeth Peskir", role: "Student Teacher" },
+  { name: "Georgia McGlone", role: "Student Teacher" },
+];
+
+const getInitials = (name: string) =>
+  name.split(" ").map((n) => n[0]).join("").toUpperCase();
+
+const avatarColors = [
+  "from-primary to-accent",
+  "from-accent to-primary",
+  "from-primary/80 to-rose-light",
+  "from-rose-light to-primary",
+  "from-primary to-primary/60",
+  "from-accent/80 to-primary",
+  "from-primary/70 to-accent/90",
+  "from-rose-light to-accent",
+  "from-primary to-rose-light",
+  "from-accent to-rose-light",
+  "from-primary/90 to-accent/70",
 ];
 
 const TeamSection = () => {
@@ -91,13 +73,10 @@ const TeamSection = () => {
                 onClick={() => hasBio && setSelected(i)}
                 className={`bg-card rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 text-left ${hasBio ? "cursor-pointer hover:-translate-y-1" : "cursor-default"}`}
               >
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                <div className={`aspect-square overflow-hidden flex items-center justify-center bg-gradient-to-br ${avatarColors[i % avatarColors.length]}`}>
+                  <span className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground">
+                    {getInitials(member.name)}
+                  </span>
                 </div>
                 <div className="p-2.5">
                   <h3 className="font-display text-xs sm:text-sm font-bold text-charcoal leading-tight">{member.name}</h3>
@@ -130,11 +109,11 @@ const TeamSection = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative">
-                <img
-                  src={team[selected].image}
-                  alt={team[selected].name}
-                  className="w-full aspect-[4/3] object-cover"
-                />
+                <div className={`w-full aspect-[4/3] flex items-center justify-center bg-gradient-to-br ${avatarColors[selected % avatarColors.length]}`}>
+                  <span className="font-display text-7xl font-bold text-primary-foreground">
+                    {getInitials(team[selected].name)}
+                  </span>
+                </div>
                 <button
                   onClick={() => setSelected(null)}
                   className="absolute top-3 right-3 w-8 h-8 bg-foreground/50 backdrop-blur-sm rounded-full flex items-center justify-center text-primary-foreground hover:bg-foreground/70 transition-colors"
