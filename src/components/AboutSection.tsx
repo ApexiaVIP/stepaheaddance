@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import classesImage from "@/assets/about-dance.jpg";
+import classesImage from "@/assets/team/MG_2432-683x1024.jpg.webp";
 
 const AboutSection = () => {
   return (
